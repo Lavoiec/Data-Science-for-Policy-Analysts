@@ -24,7 +24,7 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2019-06-28" />
+<meta name="date" content="2019-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,6 +163,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
 <p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
 <p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
+<p>Data Scientists have an interesting position in policy circles these days. They have been coming into meeting rooms as evangelists for an innovative new way of approaching age-old problems that have vexed policy makers for decades. They are able to enter the room with their heads held high, MacBooks tucked gently under their arms as they assume the head of the table. They wield a new vocabulary and confident promises that they can revolutionize whatever policy problem you’re having with just a few simple scripts.</p>
+<p>These data scientists have command over a poweful language of technical terms that have been propelled to hypnotic power thanks to sensational articles from business magazines. Companies like the Economist and Harvard Business Review have formed a symbiotic relationship with data scientists – The latter shows a proof of concept of an interesting new idea, and the former will propel the idea to the stratosphere with their articles asking if a new technological world order is upon us.</p>
+<p>Data scientists use this new language, along with a screen with several command lines open on one half of the screen, and long files of code on the other before they open the sleek new interface to a product that will solve your problem. Like a wizard uttering a spell, they use technical terms like <em>artifical intelligence</em>, <em>gradient descent</em> or <em>algorithm</em> to assert their authority of the room. All the “non-technical” folks in the room are immediately subject to a sinister form of information asymmetry. The articles that appear in their inboxes tell them that these new technologies are the key to staying ahead in the new world, and the data scientist in front of them are providing an example of this right in front of them. The example they see is compelling, and if the data scientist’s claims are true, how could they refuse them?</p>
+<p>The data scientist has a clear advantage in these situations. Policy analysts are often desperate to learn about this new environment that is being thrust upon them. The articles being written in every business magazine are telling them that they will be left behind if they don’t adopt these technologies. Unfortunately for these analysts, they don’t have the time or the resources to even learn about the techniques that data scientists champion in their meetings. Their arms are twisted in these meetings. They can’t question the techniques and assumptions that data scientists are employing before their eyes, and they can’t refuse to give these methods a shot for fear of ridicule from management above and below. If they reject the data scientist, they are often mocked as a dinosaur, and are warned that they are holding the organization back from modernization.</p>
+<p>The data scientist is now ready to go in for the kill. The policy analysts are powerless, and are all but forced to accept the data scientist’s proposal. The data scientist asks for a contract to continue working on this project. They ask for more data, more resources, and time. The policy analyst is in no position to refuse, and accepts. Perhaps the manager and analyst walking out of the meeting are excited for what’s coming next. Or maybe they’re confused, skeptical and disoriented. To the data scientist, it almost doesn’t matter. They walked into that meeting room with a game plan to wrestle the analysts into submission, and it worked without a hitch, as it almost often does.</p>
+<p>I’ve seen this story unfold in front of me countless times. I’ve seen managers in the policy space rubbing their head trying to understand why these methods are starting to work. When the analysts poke holes in the demonstration, data scientists are quick to remind them that the method they’re proposing is a <em>proof of concept</em>, and not nearly completed. This neutralizes the analysts, leading them right into the palm of the data scientist’s hands.</p>
+<p>The story is a little different from the data scientist’s perspective. They have seen an institutional problem, and they see a pool of data that is not being utilized by the policy analysts. They’ve done the research in the techniques and methods that could address this problem. They know that there is an <em>open source</em> package that can implement the statistical techniques necessary to help this problem, and they know how to get a hold of the data. They get to work quickly, excited about the impact that their technology can have. After a week or two of <em>sprinting</em> on this problem, they finish their proof of concept and quickly arrange a meeting to show the exciting new technology they have.</p>
+<p>The data scientist prepares their presentation. They drum up a couple of quick slides to explain what they see the problem is, and what the technology they’ve developed can do to solve the problem. They purposely omit the technical mathematical concepts, replacing it with intuitive explanations of the technology–not because they want to hide behind these techniques, but because they want to focus on the results. The mechanics behind technology can be intimidating and would distract from what’s actually going on</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))
 <span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
@@ -393,19 +401,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
