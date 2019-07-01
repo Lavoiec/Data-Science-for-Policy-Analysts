@@ -32,10 +32,13 @@ The policy analysts and managers in our meeting are forced to deal with a troubl
 
 This is an unfortunate case of asymmetric information on both sides. The data scientists want to communicate the work they're doing, but they can only guess as to the exact needs of the client. The analysts themselves are caught unaware of the mechanics behind the technology they're being pressured to endorse. The asymmetry could lead to the two parties talking past each other, not really addressing the other's questions. At worst, loads of time and money can be spent developing a product that doesn't quite fit the needs of the client. It's a tricky situation to navigate, often requiring one of the party's to understand the exact situation of the other and translate their methods to the other's language. This communication is a challenging art that comes with experience.
 
-For policy analysts, an understanding of the techniques used in a data scientist's toolkit can help bridge the communication gap between the two. In more sinister cases, a knowledge of the intuition between data science's most sophisticated techniques could prove most useful as a defense from clueless colleagues or nefarious consultants.
+For policy analysts, an understanding of the techniques used in a data scientist's toolkit can help bridge the communication gap between the two. In more sinister cases, a knowledge of the intuition behind data science's most sophisticated techniques could prove most useful as a defense from clueless colleagues or nefarious consultants.
 
 ## Goals
 
-The goal of this book is to address the asymmetry problem on the problem of the policy analyst.
+The goal of this book is to introduce some of the most important concepts in data science to a non-technical policy analyst. Each chapter will present a different set of concepts to the reader, explaining the intuition and ideas behind some of the most popular technology in the world. The hope is that the reader will understand the concepts in data science well enough to identify the main ideas behind the technology they see every day. They will have better judgement in implementing data science in their own projects, and will be able to communicate better with data scientists.
+
+I find the ideas behind data science to be beautiful. There is elegant simplicity in some of data science's most popular workflows. I believe these ideas can stand on their own, and can be communicated without technical background.
+
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
