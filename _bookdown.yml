@@ -1,0 +1,5 @@
+book_filename: "DS_for_PA"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
