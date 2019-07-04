@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Applications | Data Science for Policy Analysts</title>
+  <title>Chapter 4 Data Manipulation | Data Science for Policy Analysts</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Applications | Data Science for Policy Analysts" />
+  <meta property="og:title" content="Chapter 4 Data Manipulation | Data Science for Policy Analysts" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Applications | Data Science for Policy Analysts" />
+  <meta name="twitter:title" content="Chapter 4 Data Manipulation | Data Science for Policy Analysts" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="methods.html">
+<link rel="prev" href="whatis.html">
 <link rel="next" href="final-words.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,13 +136,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#information-asymmetry"><i class="fa fa-check"></i><b>2.3</b> Information Asymmetry</a></li>
 <li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#goals"><i class="fa fa-check"></i><b>2.4</b> Goals</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
-<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
-<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
-<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="3" data-path="whatis.html"><a href="whatis.html"><i class="fa fa-check"></i><b>3</b> What is a Data Scientist?</a></li>
+<li class="chapter" data-level="4" data-path="data-manipulation.html"><a href="data-manipulation.html"><i class="fa fa-check"></i><b>4</b> Data Manipulation</a></li>
+<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -164,23 +160,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="applications" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Applications</h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div id="example-one" class="section level2">
-<h2><span class="header-section-number">5.1</span> Example one</h2>
-</div>
-<div id="example-two" class="section level2">
-<h2><span class="header-section-number">5.2</span> Example two</h2>
+<div id="data-manipulation" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Data Manipulation</h1>
+<p>This expertise in data manipulation comes thanks to the toolkit at their disposal. Rather than relying on old proprietary software, or be limited by a graphical interface, data scientists almost always use programming languages to manipulate data. Because of the power and flexibility of these programming languages like <em>Python</em> and <em>R</em>, they’re able to work with gigabytes of data with millions of rows as easily as they would work with ten rows. They aren’t daunted by size. In fact, most data scientists I’ve met salivate over massive datasets, because more data gives them many more possibilities.</p>
+<p>These programming languages are specialized to move data into and out of different environments and formats. A data scientist can pull data from the a hundred websites, combine the relevant information into one dataset and perform statistical analysis from there. Often, they spend a lot of time cleaning the dataset. They purge it of impurities, impute missing values and convert messy data into a beautiful tabular dataset. In fact, the saying goes that eighty percent of a data scientist’s time is spent cleaning data.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> basis_expansion(data_frame, order<span class="op">=</span><span class="dv">2</span>, interactions <span class="op">=</span> <span class="va">False</span>):
+    <span class="co"># Creates empty dataframe</span>
+    <span class="co"># We will append our new columns into the df, and then</span>
+    <span class="co"># concatenate our new frame to the original</span>
+    new_df <span class="op">=</span> pd.DataFrame()
+    relevant_col_list <span class="op">=</span> []
+    
+    
+    <span class="kw">def</span> check_if_relevant(df):
+        <span class="cf">for</span> col <span class="kw">in</span> df.columns:
+            unique_vals <span class="op">=</span> <span class="bu">list</span>(df[col].unique())
+            <span class="cf">if</span> <span class="kw">not</span> (<span class="bu">len</span>(unique_vals) <span class="op">==</span> <span class="dv">2</span> <span class="kw">and</span> <span class="dv">0</span> <span class="kw">in</span> unique_vals <span class="kw">and</span> <span class="dv">1</span> <span class="kw">in</span> unique_vals):
+                relevant_col_list.append(col)
+            
+    check_if_relevant(data_frame)
+    <span class="cf">for</span> exponent <span class="kw">in</span> (<span class="bu">range</span>(<span class="dv">1</span>,order)):
+        exponent <span class="op">+=</span> <span class="dv">1</span> <span class="co"># For each exponent, add columns</span>
+        <span class="cf">for</span> col <span class="kw">in</span> relevant_col_list:
+       
+            new_df[col<span class="op">+</span><span class="st">&#39;**&#39;</span><span class="op">+</span><span class="bu">str</span>(exponent)] <span class="op">=</span> data_frame[col]<span class="op">**</span>exponent
+    
+    <span class="cf">if</span> interactions:
+        <span class="cf">for</span> col1 <span class="kw">in</span> data_frame.columns:
+            <span class="cf">for</span> col2 <span class="kw">in</span> data_frame.columns:
+                <span class="cf">if</span> col1 <span class="op">!=</span> col2:
+                    new_df[col1<span class="op">+</span><span class="st">&quot;*&quot;</span><span class="op">+</span>col2] <span class="op">=</span> data_frame[col1]<span class="op">*</span>data_frame[col2]
+    new_dataframe <span class="op">=</span> pd.concat([data_frame, new_df], axis<span class="op">=</span><span class="dv">1</span>)
+    <span class="cf">return</span> new_dataframe</code></pre>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="whatis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -226,19 +245,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

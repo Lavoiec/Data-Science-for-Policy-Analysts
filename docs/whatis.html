@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 What is a Data Scientist? | Data Science for Policy Analysts</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 What is a Data Scientist? | Data Science for Policy Analysts" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 What is a Data Scientist? | Data Science for Policy Analysts" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Chris Lavoie" />
+
+
+<meta name="date" content="2019-07-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="final-words.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#the-policy-analysts-challenge"><i class="fa fa-check"></i><b>2.1</b> The Policy Analyst’s Challenge</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#the-data-scientists-challenge"><i class="fa fa-check"></i><b>2.2</b> The Data Scientist’s Challenge</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#information-asymmetry"><i class="fa fa-check"></i><b>2.3</b> Information Asymmetry</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#goals"><i class="fa fa-check"></i><b>2.4</b> Goals</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="whatis.html"><a href="whatis.html"><i class="fa fa-check"></i><b>3</b> What is a Data Scientist?</a><ul>
+<li class="chapter" data-level="3.1" data-path="whatis.html"><a href="whatis.html#data-manipulation-and-programming"><i class="fa fa-check"></i><b>3.1</b> Data Manipulation and Programming</a></li>
+<li class="chapter" data-level="3.2" data-path="whatis.html"><a href="whatis.html#statistical-knowledge"><i class="fa fa-check"></i><b>3.2</b> Statistical Knowledge</a></li>
+<li class="chapter" data-level="3.3" data-path="whatis.html"><a href="whatis.html#solving-business-problems"><i class="fa fa-check"></i><b>3.3</b> Solving Business Problems</a></li>
+<li class="chapter" data-level="3.4" data-path="whatis.html"><a href="whatis.html#code"><i class="fa fa-check"></i><b>3.4</b> Code</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>4</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Policy Analysts</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="whatis" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> What is a Data Scientist?</h1>
+<p>One of the first questions that might have occurred to you as you’ve heard about data scientists is: What do they do?</p>
+<p>This is actually not quite a simple answer. Data science has come to serve as a label for data specialists. They are able to approach a wide swath of problems due to their ability to work in data in all of its forms. Data scientists are master data manipulators. They are often well-versed in statistics, and they thrive on solving business problems with their skills.</p>
+<div id="data-manipulation-and-programming" class="section level2">
+<h2><span class="header-section-number">3.1</span> Data Manipulation and Programming</h2>
+<p>This expertise in data manipulation comes thanks to the toolkit at their disposal. Rather than relying on old proprietary software, or be limited by a graphical interface, data scientists almost always use programming languages to manipulate data. Because of the power and flexibility of these programming languages like <em>Python</em> and <em>R</em>, they’re able to work with gigabytes of data with millions of rows as easily as they would work with ten rows. They aren’t daunted by size. In fact, most data scientists I’ve met salivate over massive datasets, because more data gives them many more possibilities.</p>
+<p>These programming languages are specialized to move data into and out of different environments and formats. A data scientist can pull data from the a hundred websites, combine the relevant information into one dataset and perform statistical analysis from there. Often, they spend a lot of time cleaning the dataset. They purge it of impurities, impute missing values and convert messy data into a beautiful tabular dataset. In fact, the saying goes that eighty percent of a data scientist’s time is spent cleaning data.</p>
+<p>Below is an example of a function that a data scientist might employ in order to manipulate the data, using the programming language <em>Python</em>. The particular function expands a dataset to include exponential transformations of its variables. It’s an example of code that would be used to rapidly generate lots of different data from an existing dataset.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> df_expansion(data_frame, order<span class="op">=</span><span class="dv">2</span>, interactions <span class="op">=</span> <span class="va">False</span>):
+    <span class="co"># Creates empty dataframe</span>
+    <span class="co"># We will append our new columns into the df, and then</span>
+    <span class="co"># concatenate our new frame to the original</span>
+    new_df <span class="op">=</span> pd.DataFrame()
+    relevant_col_list <span class="op">=</span> []
+    
+    
+    <span class="kw">def</span> check_if_relevant(df):
+        <span class="cf">for</span> col <span class="kw">in</span> df.columns:
+            unique_vals <span class="op">=</span> <span class="bu">list</span>(df[col].unique())
+            <span class="cf">if</span> <span class="kw">not</span> (<span class="bu">len</span>(unique_vals) <span class="op">==</span> <span class="dv">2</span> <span class="kw">and</span> <span class="dv">0</span> <span class="kw">in</span> unique_vals <span class="kw">and</span> <span class="dv">1</span> <span class="kw">in</span> unique_vals):
+                relevant_col_list.append(col)
+            
+    check_if_relevant(data_frame)
+    <span class="cf">for</span> exponent <span class="kw">in</span> (<span class="bu">range</span>(<span class="dv">1</span>,order)):
+        exponent <span class="op">+=</span> <span class="dv">1</span> <span class="co"># For each exponent, add columns</span>
+        <span class="cf">for</span> col <span class="kw">in</span> relevant_col_list:
+            new_df[col<span class="op">+</span><span class="st">&#39;**&#39;</span><span class="op">+</span><span class="bu">str</span>(exponent)] <span class="op">=</span> data_frame[col]<span class="op">**</span>exponent
+    
+    <span class="cf">if</span> interactions:
+        <span class="cf">for</span> col1 <span class="kw">in</span> data_frame.columns:
+            <span class="cf">for</span> col2 <span class="kw">in</span> data_frame.columns:
+                <span class="cf">if</span> col1 <span class="op">!=</span> col2:
+                    new_df[col1<span class="op">+</span><span class="st">&quot;*&quot;</span><span class="op">+</span>col2] <span class="op">=</span> data_frame[col1]<span class="op">*</span>data_frame[col2]
+    new_dataframe <span class="op">=</span> pd.concat([data_frame, new_df], axis<span class="op">=</span><span class="dv">1</span>)
+    <span class="cf">return</span> new_dataframe</code></pre>
+<p>Using code like the example above, they are able to rapidly evaluate large amounts of data in order to solve the problem at hand. Data that becomes difficult to manage in Excel is mincemeat for a data scientist. A typical day for a data scientist will involve an immense amount of data cleaning, and these skills should not be discounted.</p>
+</div>
+<div id="statistical-knowledge" class="section level2">
+<h2><span class="header-section-number">3.2</span> Statistical Knowledge</h2>
+<p>The common saying goes that data scientists know more computer science than a statistician, and more statistics than a computer scientist. While I’m not convinced this is very true, it does provide a useful heuristic to think about data scientists. Their ability to move data from A to B is an invaluable skill, however they often rely on statistical analysis and data visualization to extract usefulness from the data.</p>
+<p>This is where the reported sexiness of a data scientist comes into play [CITATION]. With a deep knowledge of statistics, a data scientist is able to tease out patterns and relationships from the data they are analyzing. Some of the most well-known tools in their belt include <em>Machine Learning</em>, <em>Natural Language Processing</em>, <em>A/B Testing</em>, among many others. This is probably the most well-known part of the data scientist’s skillset and the statistical concepts and ideas they employ will be the subject of most of this book.</p>
+</div>
+<div id="solving-business-problems" class="section level2">
+<h2><span class="header-section-number">3.3</span> Solving Business Problems</h2>
+<p>A data scientist is not a theorist. They are practicioners with a large toolkit, looking to solve practical problems in the real world.</p>
+</div>
+<div id="code" class="section level2">
+<h2><span class="header-section-number">3.4</span> Code</h2>
+<p>As I mentioned before, data scientists often solve their data problems using code. The advantages of doing so are numerous. Writing code allows the analyst to be incredible specific about what they want the computer to do for them. They can work with large amounts of data with the same ease as smaller tables. But by far, the biggest advantage of working with code is the transferability:</p>
+<p>At the end of the day. The code that an individual writes is just text. It’s merely a string of characters put together that, when put through the write interpreter, can command the computer to do certain specific things. We can easily download the same interpreter, and the code that you write should be just as good on my machine.</p>
+<p>The ideas behind code are often incredibly powerful. Because of this, software was often kept private. While the format of the code is just text, the instructions that the machine executes can be invaluable, and are economically essential for a company to keep secret, lest they lose all exclusivity over the product.</p>
+<p>But this is not the case for the Free and Open Source Movement. In fact, in the 1950’s and 1960’s, software was primarily written by academics who shared their code freely and openly. It wasn’t until the 1970’s and 1980’s that software was generally closed off from the public.</p>
+<p>Programming languages and their compilers are generally released as open-source software. Python and R are no exceptions. As mentioned before, Python and R are two of the most common programming languages for data science. A key step in the rise of these languages in data science comes from the fact that they are free and open-source. They are freely available for anyone to use and write code in. When statisticians (who flocked primarily to the R programming language) started writing their own packages–code wrapped into a bundle so as to be distributed–they shared them openly online. Their colleagues, or anyone who stumbled upon them, could use the code written and scrutinized by professionals in their field.</p>
+<p>Over the years, the number of statistical packages on both Python and R have grown tremendously. Data scientists today have access to state of the art methods of data and statistical analysis, and they’re not afraid to use them. Data scientists are able to reach for open-source software implementations of some of the most powerful techniques around today and implement them in almost no time. Their analysis stands on the shoulders of benevolent giants, to the benefit of everyone.</p>
+<p><a href="https://en.wikipedia.org/wiki/History_of_free_and_open-source_software" class="uri">https://en.wikipedia.org/wiki/History_of_free_and_open-source_software</a>
+<a href="https://en.wikipedia.org/wiki/Open-source-software_movement" class="uri">https://en.wikipedia.org/wiki/Open-source-software_movement</a>
+<a href="https://journal.r-project.org/archive/2009-1/RJournal_2009-1_Chambers.pdf" class="uri">https://journal.r-project.org/archive/2009-1/RJournal_2009-1_Chambers.pdf</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="final-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["DS_for_PA.pdf", "DS_for_PA.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
